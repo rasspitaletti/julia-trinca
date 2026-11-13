@@ -1,16 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { site } from "@/lib/site";
 import "@/styles/tokens.css";
 import "@/styles/base.css";
 import "@/styles/sections.css";
 
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  style: ["normal", "italic"],
+/*
+ * Plus Jakarta Sans servida do próprio projeto (src/fonts, licença OFL).
+ * Antes vinha de next/font/google, que baixa a fonte do Google durante o build
+ * e quebrava a compilação quando esse download falhava.
+ */
+const jakarta = localFont({
+  src: [
+    { path: "../fonts/PlusJakartaSans-Variable.woff2", weight: "200 800", style: "normal" },
+    { path: "../fonts/PlusJakartaSans-Variable-Italic.woff2", weight: "200 800", style: "italic" },
+  ],
   variable: "--font-sans",
   display: "swap",
+  fallback: ["system-ui", "Segoe UI", "Arial", "sans-serif"],
 });
 
 export const metadata: Metadata = {

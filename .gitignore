@@ -1,0 +1,5 @@
+# arquivos locais que não devem ir para o repositório
+*.log
+*.zip
+node_modules/
+.next/
