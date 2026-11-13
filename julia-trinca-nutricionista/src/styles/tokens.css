@@ -1,0 +1,67 @@
+/* Design tokens — Julia Trinca
+   Direção da referência: verde-floresta, branco, creme claro e dourado-trigo,
+   tipografia sans pesada (Plus Jakarta Sans) com itálico verde de destaque.
+   Escalas fluidas no estilo Utopia (320px → 1440px). */
+:root {
+  /* Cor */
+  --green-950: #102a1d;
+  --green-900: #163a28;
+  --green-800: #1d4733;   /* fundo principal escuro (header, hero) */
+  --green-700: #275a41;
+  --green-600: #2f7a52;   /* itálico de destaque em fundo claro */
+  --green-100: #e8efe9;
+  --cream: #f6f4ee;
+  --white: #ffffff;
+  --line: #e5e9e4;
+  --tan: #d9b48a;         /* segunda linha do título, detalhes */
+  --tan-ink: #8a6638;
+  --ink: #12261b;
+  --ink-soft: #56645b;
+  --on-dark: #ffffff;
+  --on-dark-soft: #cfdbd2;
+
+  /* Tipografia */
+  --font: var(--font-sans), system-ui, sans-serif;
+
+  --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.875rem);
+  --step-0: clamp(0.98rem, 0.95rem + 0.15vw, 1.0625rem);
+  --step-1: clamp(1.1rem, 1.04rem + 0.3vw, 1.3rem);
+  --step-2: clamp(1.25rem, 1.15rem + 0.5vw, 1.6rem);
+  --step-3: clamp(1.9rem, 1.5rem + 1.9vw, 3.1rem);
+  --step-hero: clamp(2.5rem, 1.2rem + 6.4vw, 6.6rem);
+
+  /* Espaço */
+  --gutter: clamp(1rem, 0.6rem + 2.2vw, 2.5rem);
+  --space-s: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+  --space-m: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
+  --space-l: clamp(2rem, 1.6rem + 1.8vw, 3.5rem);
+  --space-xl: clamp(3rem, 2.4rem + 3vw, 5.5rem);
+  --section: clamp(4.5rem, 3.4rem + 5vw, 8.5rem);
+  --max: 1240px;
+
+  /* Forma */
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-l: 24px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 20px 40px -28px rgb(16 42 29 / 0.35);
+
+  /* Movimento */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 160ms;
+  --dur-2: 320ms;
+  --dur-3: 700ms;
+  --dur-4: 1000ms;
+
+  --header-h: 80px;
+  --dock-h: 0px;
+}
+
+@media (max-width: 959px) {
+  :root {
+    --header-h: 64px;
+    --dock-h: calc(64px + env(safe-area-inset-bottom));
+  }
+}

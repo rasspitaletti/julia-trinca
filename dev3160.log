@@ -1,0 +1,18 @@
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3160
+   - Network:      http://54.232.189.113:3160
+
+ ✓ Starting...
+ ✓ Ready in 107.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 127.3s (630 modules)
+ GET / 200 in 60079ms
+ GET / 200 in 9013ms
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3160
+   - Network:      http://54.232.189.113:3160
+
+ ✓ Starting...
+ ✓ Ready in 143.4s
+[?25h
